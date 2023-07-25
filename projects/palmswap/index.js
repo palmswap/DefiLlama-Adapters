@@ -33,12 +33,12 @@ const { staking } = require("../helper/staking");
 
 const palmswapVault = "0x806f709558CDBBa39699FBf323C8fDA4e364Ac7A"; //Vault
 
-const palmTokenStakingContract = "0xF14fDA6c354b5Ec53027F131f2e8fBDD192A3095"; //RewardRouter
+const palmTokenStakingContract = "0x95fC6F7Df412040a815494cF27fBc82bE6c7585C"; //FeePalmRewardTracker
 const palmToken = "0x29745314B4D294B7C77cDB411B8AAa95923aae38"; //PALM token address
 
 module.exports = {
   bsc: {
-    tvl: gmxExports({ vault: palmswapVault }), //works
-    staking: staking(palmTokenStakingContract, palmToken, 'bsc'), // does not work
+    tvl: gmxExports({ vault: palmswapVault }),
+    staking: staking(palmTokenStakingContract, palmToken, "bsc"),
   },
 };
